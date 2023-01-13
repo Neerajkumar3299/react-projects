@@ -1,0 +1,17 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family:Verdana, sans-serif;
+    background-color: aliceblue;
+}
+main{
+    width: 40%;
+    margin: 5% auto;
+}
+h1{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
+}

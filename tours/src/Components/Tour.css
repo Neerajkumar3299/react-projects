@@ -1,0 +1,48 @@
+.single-tour{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px;
+    background-color: white;
+    box-shadow: 1px 1px 10px grey;
+}
+.single-tour>img{
+    width: 100%;
+}
+.single-tour>footer{
+    padding: 10px 0px;
+}
+.info{
+    display: flex;
+    padding: 0px 20px;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: 1.1px;
+}
+footer>p{
+    padding: 10px 20px;
+    text-align: justify;
+    color: rgb(109, 106, 106);
+}
+.delete-btn{
+    padding: 8px 20px;
+    border: 2px solid rgb(107, 13, 13);
+    color: rgb(94, 15, 15);
+    border-radius: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    display: block;
+    margin: auto;
+}
+.delete-btn:hover{
+    cursor: pointer;
+}
+#show-more{
+    border: none;
+    color:blue;
+}
+#show-more:hover{
+    cursor: pointer;
+    color: rgb(44, 44, 140);
+}

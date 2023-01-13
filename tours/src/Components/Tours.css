@@ -1,0 +1,28 @@
+.underline{
+    width: 22%;
+    height: 5px;
+    background-color: rgb(127, 150, 255);
+    border-radius: 10px;
+    margin: auto;
+}
+.tours{
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    /* border: 3px solid green; */
+}
+.refresh-btn{
+    padding: 8px 15px;
+    border: none;
+    background-color: rgb(47, 135, 123);
+    color: white;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+}
+.refresh-btn:hover{
+    cursor: pointer;
+    background-color: rgb(80, 125, 119);
+}
