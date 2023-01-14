@@ -1,0 +1,113 @@
+.container{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+.title{
+    width: 100%;
+    margin-top: 40px;
+
+}
+.title>h1{
+    text-align: center;
+    padding: 10px;
+    color: blue;
+}
+.underline{
+    width: 5%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: blue;
+    margin: auto;
+}
+.btn-container{
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+.filter-btn{
+    margin: 0px 10px;
+}
+.filter-btn>button{
+    padding: 6px 20px;
+    color: blue;
+    letter-spacing: 1.3px;
+    font-weight: 600;
+    border:none ;
+    transition: 0.4s ease-in;
+    border-radius: 4px;
+    letter-spacing: 1.2px;
+}
+.filter-btn>button:hover{
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+}
+.menu{
+    width: 80%;
+    height: auto;
+    margin: 10px 0px;
+    margin: auto;
+    display:flex;
+    flex-wrap: wrap;
+}
+.menu-item{
+    width: 50%;
+    padding: 10px;
+    display: flex;
+}
+.image{
+    width: 25%;
+    height: 200px;
+    border-radius: 15px;
+    
+    overflow: hidden;
+}
+.image>img{
+    width: 100%;
+    height: 100%;
+}
+
+.menu-item-info{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px;
+}
+.menu-item-info>p{
+    color: rgb(96, 92, 92);
+    letter-spacing: 1.2px;
+}
+.menu-item-title{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom:10px ;
+}
+.menu-item-title>h3{
+    letter-spacing: 1.2px;
+}
+.line{
+    width: 100%;
+    height: 1px;
+    border-radius: 5px;
+    background-color: rgb(219, 214, 214);
+    margin-bottom: 10px;
+}
+.price{
+    color: blue;
+}
+
+
+/* --------------- Media Query ------------- */
+@media screen and (max-width:1075px){
+    .menu-item{
+        width: 100%;
+    }
+}
+@media screen and (max-width:575px) {
+    .menu {
+        width: 98%;
+    }
+}
