@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import Category from './Component/Category';
 import Menu from './Component/Menu';
@@ -6,7 +6,11 @@ import data from './data';
 function App() {
   const [menu,setMenu]=useState(data);
   const [category,setCategory]=useState([])
-
+  useEffect(()=>{
+    setCategory(["all",...new Set(data.map((d)=>{
+      return d.category;
+    }))])
+  },[])
   const filterItem=(category)=>{
     if(category==="all"){
       setMenu(data);
@@ -26,7 +30,7 @@ function App() {
         <h1>Our Menu</h1>
         <div className="underline"></div>
       </div>
-      <Category category={category}/>
+      <Category category={category} filterItem={filterItem}/>
       <Menu menu={menu}/>
     </main>
     </>

@@ -1,11 +1,14 @@
-function Category({Category}){
+function Category({category,filterItem}){
     return (
       <>
         <div className="btn-container">
-          <div className="filter-btn">
-            <button>All</button>
-          </div>
-          
+          {
+            category.map((cat,index)=>{
+              return <div className="filter-btn" key={index}>
+                <button onClick={()=>filterItem(cat)}>{cat}</button>
+              </div>;
+            })
+          } 
         </div>
       </>
     );
