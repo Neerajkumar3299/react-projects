@@ -7,8 +7,6 @@ import data from "./data"
 function App() {
   const [people,setPeople]=useState(data);
   const [index,setIndex]=useState(0)
-  console.log("Hello Ram Ji")
-
   useEffect(()=>{
     let lastIndex=people.length-1;
     if(index==lastIndex){
