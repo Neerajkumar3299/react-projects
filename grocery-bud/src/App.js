@@ -1,9 +1,18 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Alert from './Component/Alert';
 import List from './Component/List';
+const getLocalStorage=()=>{
+  let list=localStorage.getItem("list");
+  if(list){
+    return JSON.parse(list);
+  }
+  else{
+    return [];
+  }
+}
 function App() {
   const [item,setItem]=useState("");
-  const [list,setList]=useState([]);
+  const [list,setList]=useState(getLocalStorage());
   const [isEdit,setIsEdit]=useState(false);
   const [editId,setEditId]=useState();
   const [alert,setAlert]=useState({show:false,msg:"",type:""})
@@ -51,6 +60,7 @@ function App() {
     console.log(item)
   }
   const deleteItem=(id)=>{
+    showAlert(true,"Deleted succesfully..","success")
     const newList=list.filter((l)=>{
       if(l.id!=id){
         return l;
@@ -62,11 +72,15 @@ function App() {
     showAlert(true,"All records deleted successfully..",'success')
     setList([]);
   }
+
+  useEffect(()=>{
+    localStorage.setItem("list",JSON.stringify(list));
+  },[list])
   return (
     <>
       <div className="container">
         <section className="section-center">
-            {alert.show && <Alert alert={alert} showAlert={showAlert}/>}
+            {alert.show && <Alert alert={alert} showAlert={showAlert} list={list}/>}
             <h3>Grocery Bud</h3>
             <form onSubmit={handleSubmit}>
               <input type="text" name="item" id="item" placeholder="e.g. egg" value={item} onChange={(event)=>setItem(event.target.value)} />
