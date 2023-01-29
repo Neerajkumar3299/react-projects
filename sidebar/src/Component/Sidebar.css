@@ -1,0 +1,95 @@
+/* ------------------------- Sidebar ------------------ */
+.sidebar {
+    width: 0px;
+    height: 100vh;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 2px 0px 5px grey;
+    z-index: 2;
+    padding: 15px 0px;
+    position: absolute;
+}
+.show-sidebar{
+    width: 22%;
+}
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    font-size: 25px;
+}
+
+.sidebar-header>p {
+    font-weight: 600;
+    text-shadow: 2px 2px 3px grey;
+}
+
+.sidebar-header>p>span {
+    color: blue;
+}
+
+.close-sidebar:hover {
+    cursor: pointer;
+    color: red;
+}
+
+.link-container {
+    width: 100%;
+    height: auto;
+    padding: 10px 0px;
+}
+
+.links {
+    width: 100%;
+}
+
+.links>li {
+    width: 100%;
+    transition: 0.3s linear;
+    list-style: none;
+    padding: 0px 10px;
+    margin-top: 5px;
+}
+
+#icon {
+    padding: 0px 5px;
+    font-size: 21px;
+}
+
+a {
+    width: 100%;
+    padding: 7px 12px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    transition: 0.3s linear;
+    color: rgb(86, 83, 83);
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+a:hover {
+    color: rgb(83, 83, 235);
+    background-color: rgb(212, 244, 244);
+}
+/* ------------------------ Media Query ---------------------------- */
+@media screen and (max-width:875px) {
+    .show-sidebar {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width:660px) {
+    .show-sidebar {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:385px) {
+    .show-sidebar {
+        width: 100%;
+    }
+}
